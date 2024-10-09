@@ -4,7 +4,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Apporv Bedmutha - Portfolio",
+  title: "Apoorv Bedmutha - Portfolio",
   description:
     "Apoorv Bedmutha is a MTech with Honors from IIIT Gwalior, 1.2 years professional experience in Backend, Frontend and Full-Stack development roles, SDE @ hushh.ai, Top 16% coder globally @ Leetcode, GATE Qualified with All India Rank 8028",
 };
