@@ -13,8 +13,10 @@ export default function ScheduleAMeet(){
     return (
         <div>
             <RedirectLink
-                title="Schedule a Meet"
+                title="Schedule a meet"
                 link=""
+                underlineWidth="176pt"
+                underlineHeight="3pt"
             ></RedirectLink>
         </div>
     )

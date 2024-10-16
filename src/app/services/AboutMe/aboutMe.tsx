@@ -1,6 +1,6 @@
-import getDetailsAboutMe from "./getDetailsAboutMe";
+import getDetails from "./getDetails";
 
 const aboutMe={
-    getDetailsAboutMe: getDetailsAboutMe
+    getDetails: getDetails
 }
 export default aboutMe;

@@ -1,0 +1,22 @@
+// desc: Styles for RedirectLink component
+.RedirectLink{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12pt;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 19pt;
+    .RedirectLink__Link{
+        display: flex;
+        .RedirectLink__Title{
+            margin-right: 12pt;
+        }
+        .RedirectLink__Arrow{
+            height: 9pt;
+        }
+    }
+    .RedirectLink__underline{
+        margin-top: 6pt;
+    }
+}
