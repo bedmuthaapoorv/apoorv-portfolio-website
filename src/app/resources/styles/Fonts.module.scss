@@ -1,0 +1,27 @@
+.primary {
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bannerL {
+    font-size: 9rem;
+    font-weight: 200;
+    @media screen and (max-width: 516px) {
+        font-size: 8rem;        
+    }
+    @media screen and (max-width: 417px) {
+        font-size: 7rem;        
+    }
+}
+
+.bannerM {
+    font-size: 6rem;
+    font-weight: 600;
+}

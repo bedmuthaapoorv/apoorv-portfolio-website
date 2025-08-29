@@ -9,14 +9,15 @@ const menuOptions = [
   {
     title: "Resume",
     action: () => {
-      console.log("Resume");
+      window.open(
+        "https://drive.google.com/file/d/1sR2QLDppUBtCqmxFW_tgUCwJrd2_ViTT/view?usp=sharing",
+        "_blank"
+      );
     },
   },
   {
     title: "Contact",
-    action: () => {
-      console.log("Contact");
-    },
+    action: () => {},
   },
 ];
 export default menuOptions;
