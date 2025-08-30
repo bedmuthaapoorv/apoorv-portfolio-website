@@ -19,9 +19,27 @@
     @media screen and (max-width: 417px) {
         font-size: 7rem;        
     }
+    @media screen and (max-width: 400px) {
+        font-size: 6rem;        
+    }
+    @media screen and (max-width: 320px) {
+        font-size: 5rem;        
+    }
 }
 
 .bannerM {
     font-size: 6rem;
     font-weight: 600;
+    @media screen and (max-width: 638px) {
+        font-size: 5.4rem;        
+    }
+    @media screen and (max-width: 417px) {
+        font-size: 4.7rem;        
+    }
+    @media screen and (max-width: 386px) {
+        font-size: 4rem;        
+    }
+    @media screen and (max-width: 320px) {
+        font-size: 3.5rem;        
+    }
 }
