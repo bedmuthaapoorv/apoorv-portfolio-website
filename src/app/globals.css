@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.inter-semibold{
+.inter-semibold {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
 }
-body{
+
+body {
     margin: 0;
 }
-a{
+
+a {
     text-decoration: none;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
 }

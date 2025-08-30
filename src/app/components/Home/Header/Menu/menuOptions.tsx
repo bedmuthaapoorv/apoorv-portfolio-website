@@ -17,7 +17,9 @@ const menuOptions = [
   },
   {
     title: "Contact",
-    action: () => {},
+    action: () => {
+      window.open("https://www.linkedin.com/in/apoorvbedmutha", "_blank");
+    },
   },
 ];
 export default menuOptions;

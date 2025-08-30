@@ -1,7 +1,7 @@
 "use client";
 import MenuButton from "./MenuButton/MenuButton";
 import menuOptions from "./menuOptions";
-import styles from "./Menu.module.css";
+import styles from "./Menu.module.scss";
 import { useState } from "react";
 export default function Menu() {
   let [activeIndex, setActiveIndex] = useState<number>(0);
