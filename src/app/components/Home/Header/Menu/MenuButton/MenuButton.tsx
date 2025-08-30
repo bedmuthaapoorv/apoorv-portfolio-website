@@ -1,20 +1,34 @@
-'use client'
-import styles from './MenuButton.module.css'
+import styles from "./MenuButton.module.scss";
+import fontStyles from "@/app/resources/styles/Fonts.module.scss";
 // Menu button component which includes the UI element for an option in Menu
-export default function MenuButton(props: any) {
+interface MenuButtonProps {
+  title: string;
+  isActive: boolean;
+  action?: () => void;
+  setActiveIndex: (index: number) => void;
+  index: number;
+}
+
+export default function MenuButton({
+  title,
+  isActive,
+  action,
+  setActiveIndex,
+  index,
+}: Readonly<MenuButtonProps>) {
   return (
-    <div
+    <button
       style={{
-        backgroundColor: props.isActive? "white": "",
-        color: props.isActive? "#3074FE": "white",
+        backgroundColor: isActive ? "white" : "",
+        color: isActive ? "#3074FE" : "white",
       }}
-      className={`${styles.MenuButton} inter-semibold`}
+      className={`${styles.MenuButton} ${fontStyles.primary} ${fontStyles.paragraphL} ${fontStyles.semibold}`}
       onClick={() => {
-        props.action != null ? props.action() : "";
-        props.setActiveIndex(props.index);
+        action && action();
+        setActiveIndex(index);
       }}
     >
-      {props.title}
-    </div>
+      {title}
+    </button>
   );
 }
