@@ -1,0 +1,51 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    margin-top: 25px;
+
+    .Footer__ContactInfo {
+        display: flex;
+        width: 88vw;
+        justify-content: space-between;
+
+        .Footer__Socials {
+            display: flex;
+            gap: 10px;
+
+            .Footer__SocialIcon {
+                width: 25px;
+                height: 25px;
+
+                @media screen and (max-width: 576px) {
+                    width: 22px;
+                    height: 22px;
+                }
+
+                @media screen and (max-width: 476px) {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    .Footer__NameContainer {
+        width: 88vw;
+        margin-top: 25px;
+
+        .Footer__Name {
+            .Footer__FirstName {
+                font-weight: bold;
+            }
+
+            .Footer__LastName {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.Footer__plus {
+    color: #3074FE;
+}
