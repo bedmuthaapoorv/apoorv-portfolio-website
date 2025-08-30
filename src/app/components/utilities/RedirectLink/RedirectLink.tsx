@@ -1,6 +1,7 @@
 import resources from "@/app/resources/Resources";
-import styles from "./RedirectLink.module.css";
+import styles from "./RedirectLink.module.scss";
 import Link from "next/link";
+import fontStyles from "@/app/resources/styles/Fonts.module.scss";
 export default function RedirectLink(props: any) {
   let {
     titleColor = "black",
@@ -12,7 +13,9 @@ export default function RedirectLink(props: any) {
     link,
   } = props;
   return (
-    <div className={`${styles.RedirectLink} inter-semibold`}>
+    <div
+      className={`${styles.RedirectLink} ${fontStyles.primary} ${fontStyles.semibold} ${fontStyles.paragraphL}`}
+    >
       <Link href={link}>
         <div className={`${styles.RedirectLink__Link}`}>
           <div
@@ -25,19 +28,19 @@ export default function RedirectLink(props: any) {
           </div>
 
           <img
+            alt="redirect icon"
             className={`${styles.RedirectLink__Arrow}`}
             src={resources.images.redirectLinkArrowBlue.src}
             height={arrowHeight}
-          ></img>
+          />
         </div>
         <div
           className={`${styles.RedirectLink__underline}`}
           style={{
-            width: underlineWidth,
             height: underlineHeight,
             backgroundColor: underlineColor,
           }}
-        ></div>
+        />
       </Link>
     </div>
   );
