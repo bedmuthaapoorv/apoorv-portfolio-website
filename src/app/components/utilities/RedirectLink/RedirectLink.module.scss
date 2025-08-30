@@ -3,12 +3,11 @@
     display: flex;
     flex-direction: column;
     margin-top: 12pt;
-    width: 100vw;
     justify-content: center;
     align-items: center;
-    font-size: 19pt;
     .RedirectLink__Link{
         display: flex;
+        align-items: center;
         .RedirectLink__Title{
             margin-right: 12pt;
         }
@@ -18,5 +17,8 @@
     }
     .RedirectLink__underline{
         margin-top: 6pt;
+        @media screen and (max-width: 268px) {
+            width: 45vw;
+        }
     }
 }
