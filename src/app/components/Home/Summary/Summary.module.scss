@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.Summary{
+.Summary {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 8px;
-.Summary__Container{
-    font-size: 1.5rem;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: italic;
-    font-weight: 200;
-    width: 88vw;
-}
+
+    .Summary__Container {
+        width: 88vw;
+    }
 }
