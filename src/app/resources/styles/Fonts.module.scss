@@ -28,8 +28,11 @@
 }
 
 .bannerM {
-    font-size: 6rem;
+    font-size: 9rem;
     font-weight: 600;
+    @media screen and (max-width: 678px) {
+        font-size: 6rem;
+    }
     @media screen and (max-width: 638px) {
         font-size: 5.4rem;        
     }
@@ -45,7 +48,26 @@
 }
 
 .paragraphL{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    @media screen and (max-width: 1178px) {
+        font-size: 1.8rem;
+    }
+    @media screen and (max-width: 1085px) {
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width: 972px) {
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width: 925px) {
+        font-size: 1.3rem;
+    }
+    @media screen and (max-width: 813px) {
+        font-size: 1.1rem;
+    }
+    @media screen and (max-width: 678px) {
+        font-size: 1.5rem;
+        
+    }
     @media screen and (max-width: 576px) {
         font-size: 1.2rem;        
     }
