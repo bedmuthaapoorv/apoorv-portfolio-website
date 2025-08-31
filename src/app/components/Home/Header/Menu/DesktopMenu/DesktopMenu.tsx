@@ -11,11 +11,12 @@ export default function DesktopMenu() {
         <div className={styles.DesktopMenu__Flex}>
           {menuOptions.map((option: IMenuOption, index: number) => {
             return option.onDesktop ? (
-              <DesktopMenuButton
-                key={option.title}
-                title={option.title}
-                action={option.action}
-              />
+              <div key={option.title}>
+                <DesktopMenuButton
+                  title={option.title}
+                  action={option.action}
+                />
+              </div>
             ) : (
               <></>
             );
