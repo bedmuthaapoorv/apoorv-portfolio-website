@@ -1,10 +1,13 @@
+import IMenuOption from "@/app/interfaces/IMenuOption";
+
 // The menu options for the header menu
-const menuOptions = [
+const menuOptions: IMenuOption[] = [
   {
     title: "About",
     action: () => {
       console.log("About");
     },
+    onDesktop: false,
   },
   {
     title: "Resume",
@@ -14,12 +17,14 @@ const menuOptions = [
         "_blank"
       );
     },
+    onDesktop: true,
   },
   {
     title: "Contact",
     action: () => {
       window.open("https://www.linkedin.com/in/apoorvbedmutha", "_blank");
     },
+    onDesktop: true,
   },
 ];
 export default menuOptions;
