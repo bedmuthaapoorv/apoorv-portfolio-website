@@ -1,11 +1,25 @@
+"use client";
+import { useEffect, useState } from "react";
 import RedirectLink from "../../utilities/RedirectLink/RedirectLink";
 export default function ScheduleAMeet() {
+  const [isDesktop, setIsDesktop] = useState<boolean>(true);
+  useEffect(() => {
+    if (window) {
+      setIsDesktop(window.innerWidth > 678);
+    }
+  }, []);
   return (
-    <RedirectLink
-      title="Schedule a meet"
-      link="https://calendly.com/bedmuthaapoorv/30min"
-      underlineWidth="176pt"
-      underlineHeight="3pt"
-    />
+    <>
+      {isDesktop ? (
+        <></>
+      ) : (
+        <RedirectLink
+          title="Schedule a meet"
+          link="https://calendly.com/bedmuthaapoorv/30min"
+          underlineWidth="176pt"
+          underlineHeight="3pt"
+        />
+      )}
+    </>
   );
 }

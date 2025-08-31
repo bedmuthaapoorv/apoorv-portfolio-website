@@ -1,24 +1,13 @@
 "use client";
-import MenuButton from "./MenuButton/MenuButton";
-import menuOptions from "./menuOptions";
-import styles from "./Menu.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import MobileMenu from "./MobileMenu/MobileMenu";
+import DesktopMenu from "./DesktopMenu/DesktopMenu";
 export default function Menu() {
-  let [activeIndex, setActiveIndex] = useState<number>(0);
-  return (
-    <div className={`${styles.Menu}`}>
-      {menuOptions.map((option, index) => {
-        return (
-          <MenuButton
-            key={"menu_option_" + index}
-            title={option.title}
-            action={option.action}
-            setActiveIndex={setActiveIndex}
-            isActive={index === activeIndex}
-            index={index}
-          />
-        );
-      })}
-    </div>
-  );
+  const [isDesktop, setIsDesktop] = useState<boolean>(true);
+  useEffect(() => {
+    if (window) {
+      setIsDesktop(window.innerWidth > 678);
+    }
+  }, []);
+  return <>{isDesktop ? <DesktopMenu /> : <MobileMenu />}</>;
 }
