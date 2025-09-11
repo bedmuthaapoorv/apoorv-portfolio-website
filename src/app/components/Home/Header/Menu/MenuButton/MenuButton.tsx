@@ -24,7 +24,7 @@ export default function MenuButton({
       }}
       className={`${styles.MenuButton} ${fontStyles.primary} ${fontStyles.paragraphL} ${fontStyles.semibold}`}
       onClick={() => {
-        action && action();
+        action?.();
         setActiveIndex(index);
       }}
     >

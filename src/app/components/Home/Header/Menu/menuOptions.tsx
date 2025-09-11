@@ -1,5 +1,4 @@
 import IMenuOption from "@/app/interfaces/IMenuOption";
-
 // The menu options for the header menu
 const menuOptions: IMenuOption[] = [
   {
