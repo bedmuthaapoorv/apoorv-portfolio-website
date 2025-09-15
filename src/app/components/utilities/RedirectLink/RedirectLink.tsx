@@ -2,8 +2,17 @@ import resources from "@/app/resources/Resources";
 import styles from "./RedirectLink.module.scss";
 import Link from "next/link";
 import fontStyles from "@/app/resources/styles/Fonts.module.scss";
+interface IRedirectLinkProps {
+  titleColor?: string;
+  arrowHeight?: string;
+  underlineHeight?: string;
+  underlineColor?: string;
+  title: string;
+  link: string;
+  arrowColor?: string;
+}
 
-export default function RedirectLink(props: any) {
+export default function RedirectLink(props: Readonly<IRedirectLinkProps>) {
   let {
     titleColor = "black",
     arrowHeight = "9pt",
@@ -11,6 +20,7 @@ export default function RedirectLink(props: any) {
     underlineColor = "#3074FE",
     title,
     link,
+    arrowColor = "#3074FE",
   } = props;
 
   return (
