@@ -1,0 +1,22 @@
+.ReviewerDetails {
+    gap: 5px;
+    align-items: center;
+    .ReviewerImage {
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+    }
+    // .ReviewerName{
+    //     width: 123px;
+    // }
+    // .ReviewerDesignation{
+    //     width: 123px;
+    // }
+    .ReviewerCompany{
+        color: #3074FE;
+    }
+}

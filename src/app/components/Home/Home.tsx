@@ -5,6 +5,7 @@ import Summary from "./Summary/Summary";
 import Highlights from "./Highlights/Highlights";
 import Footer from "../utilities/Footer/Footer";
 import Menu from "./Header/Menu/Menu";
+import Testimonials from "./Testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Name />
       <Summary />
       <Highlights />
+      <Testimonials />
       <Footer />
     </>
   );

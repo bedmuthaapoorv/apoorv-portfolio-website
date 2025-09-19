@@ -1,0 +1,23 @@
+.Testimonial {
+    // width: 57vw;
+    // width: 70vw;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #3074FE;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 300px;
+    border-radius: 7.26px;
+
+    .Testimonial__Container {
+        margin: 24px;
+    }
+
+    .TestimonialText {
+        display: -webkit-box;
+        margin-top: 14px;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
