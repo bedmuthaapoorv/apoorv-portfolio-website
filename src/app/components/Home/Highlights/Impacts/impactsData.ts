@@ -2,14 +2,14 @@ import { StaticImageData } from "next/image";
 import mediumImpactImage from "@/app/resources/assets/images/medium-impact.png";
 import portfolioImpactImage from "@/app/resources/assets/images/portfolio-impact.png";
 import youtubeImpactImage from "@/app/resources/assets/images/youtube-impact.png";
-interface IHighlightData {
+interface IImpactData {
   image: StaticImageData;
   title: string;
   subTitle: string;
   impact: string;
   link: string;
 }
-const highlightsArray: IHighlightData[] = [
+const impactsArray: IImpactData[] = [
   {
     image: mediumImpactImage,
     title: "Crossed 80+ Followers on Tech Blog",
@@ -39,5 +39,5 @@ const highlightsArray: IHighlightData[] = [
   },
 ];
 
-export default highlightsArray;
-export type { IHighlightData };
+export default impactsArray;
+export type { IImpactData };

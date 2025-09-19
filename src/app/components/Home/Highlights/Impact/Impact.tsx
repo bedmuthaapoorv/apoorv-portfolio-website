@@ -1,31 +1,31 @@
 import fontStyles from "@/app/resources/styles/Fonts.module.scss";
 import Image from "next/image";
 import RedirectLink from "@/app/components/utilities/RedirectLink/RedirectLink";
-import styles from "./Highlight.module.scss";
-import { IHighlightData } from "../highlightsArray";
+import styles from "./Impact.module.scss";
+import { IImpactData } from "../Impacts/impactsData";
 import utilityStyles from "@/app/resources/styles/Utility.module.scss";
-interface HighlightProps {
-  highlight: IHighlightData;
+interface ImpactProps {
+  impact: IImpactData;
 }
-export default function Highlight({ highlight }: Readonly<HighlightProps>) {
+export default function Impact({ impact }: Readonly<ImpactProps>) {
   return (
-    <div className={`${styles.Highlight}`}>
+    <div className={`${styles.Impact}`}>
       <Image
-        className={`${styles.HighlightImage}`}
-        src={highlight.image}
-        alt={highlight.title}
+        className={`${styles.ImpactImage}`}
+        src={impact.image}
+        alt={impact.title}
       />
-      <div className={`${styles.HighlightText}`}>
+      <div className={`${styles.ImpactText}`}>
         <div
           className={`${fontStyles.primary} ${fontStyles.italic} ${fontStyles.paragraphL}`}
         >
-          {highlight.title}
+          {impact.title}
         </div>
         <div className={`${fontStyles.primary} ${fontStyles.paragraphL}`}>
-          <strong>{highlight.subTitle}</strong>
+          <strong>{impact.subTitle}</strong>
         </div>
         <p className={`${fontStyles.primary} ${fontStyles.paragraphL}`}>
-          {highlight.impact}
+          {impact.impact}
         </p>
         <div className={`${utilityStyles.row}`}>
           <RedirectLink
@@ -34,7 +34,7 @@ export default function Highlight({ highlight }: Readonly<HighlightProps>) {
             underlineHeight="2px"
             underlineColor="white"
             title="Impact"
-            link={highlight.link}
+            link={impact.link}
             arrowColor="white"
           />
           <div
