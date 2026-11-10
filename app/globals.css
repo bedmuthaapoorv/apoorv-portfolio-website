@@ -62,7 +62,9 @@ header.top {
 }
 .top .wrap { display: flex; align-items: center; gap: 20px; height: 60px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; letter-spacing: -.01em; }
-.mark { width: 28px; height: 28px; border-radius: 7px; background: var(--ink); color: var(--paper); display: grid; place-items: center; font: 500 13px/1 var(--mono); }
+.logo { display: inline-flex; align-items: baseline; gap: 2px; font: 600 21px/1 var(--mono); letter-spacing: -.06em; color: var(--ink); }
+.logo-dot { width: 6px; height: 6px; border-radius: 1px; background: var(--accent); flex: none; }
+.brand:hover .logo-dot { transform: scale(1.25); transition: transform .2s; }
 nav.primary { display: flex; gap: 4px; margin-left: auto; }
 nav.primary a { text-decoration: none; padding: 8px 10px; border-radius: 8px; font-size: 14.5px; color: var(--ink-2); min-height: 36px; display: inline-flex; align-items: center; }
 nav.primary a:hover { background: var(--paper-2); color: var(--ink); }
@@ -195,7 +197,6 @@ h1.display em { font-style: normal; color: var(--accent); }
 .notes h3 { font-weight: 500; font-size: 18px; letter-spacing: -.01em; }
 .eyebrow::before { content: "// "; color: var(--accent); }
 .proj .eyebrow::before, .now .eyebrow::before, form.msg .eyebrow::before { content: ""; }
-.mark { background: var(--accent); color: #0a0c0f; font-weight: 600; }
 .status { font-family: var(--mono); font-size: 12.5px; }
 .proof, .creds, .proj, .now { border-color: var(--rule); }
 .proj:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--rule)); }

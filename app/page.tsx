@@ -56,8 +56,7 @@ export default async function Home() {
       <header className="top">
         <div className="wrap">
           <a className="brand" href="#top" aria-label={`${profile.name}, home`}>
-            <span className="mark">ab</span>
-            <span>{profile.name}</span>
+            <span className="logo" aria-hidden="true">apoorv<span className="logo-dot" /></span>
           </a>
           <nav className="primary" aria-label="Primary">
             <a href="#work">Work</a>
