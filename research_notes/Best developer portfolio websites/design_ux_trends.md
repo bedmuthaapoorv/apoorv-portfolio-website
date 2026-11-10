@@ -1,0 +1,115 @@
+# Design, UX and Interaction Trends for Developer Portfolios (2025-2026)
+
+Research date: 2026-11-10. **Evidence quality caveat:** almost all "trend" content in this space comes from agency/vendor blogs, template sellers, and dev.to posts. Hard data (controlled studies, recruiter surveys) is rare. Each finding below is labelled **[Evidence]** (spec, browser data, measured study), **[Opinion]** (editorial/practitioner view), or **[Anecdote]** (single person's experience).
+
+## Current visual trends: which feel fresh vs clichéd in 2026?
+
+### Takeaway
+Bento grids and dark mode are the safe, established defaults (still working, but no longer differentiating). Polished, AI-generated or template-generated looks now read as "generic". What stands out is a single strong idea carried out with intent: distinctive typography, editorial/anti-grid composition, or interactive proof of work. Heavy 3D/WebGL and glassmorphism "underdelivered" in 2026 retrospectives, and particle-field 3D heroes are explicitly called clichés.
+
+### Cited Findings
+- **[Opinion]** Bento grids "has become one of the most recognizable design patterns of the mid-2020s"; they only work "when the sizes mean something. If every block is the same weight, you lose the hierarchy." — [line25 Web Design Trends 2026](https://line25.com/articles/web-design-trends-2026/); [The Plus Addons 2026 trends](https://theplusaddons.com/blog/web-design-trends-2026/)
+- **[Opinion, with self-reported project data]** A May 2026 retrospective of a Nov 2025 trend list says bento and dark mode "keep winning", while 3D/WebGL, glassmorphism, kinetic typography, AI personalisation and organic blob shapes "underdelivered". It reports +23% scroll depth (bento) and +18% session length (dark mode), but the author calls these project-specific, not causal. It advises restricting glass/blur to navigation or modals because of readability and paint cost, and says 3D needs optimised assets, a device budget and an accessible fallback. — [StudioMeyer: Webdesign Trends 2026 Reality Check](https://studiomeyer.io/en/blog/webdesign-trends-2026-reality-check)
+- **[Opinion]** The same retrospective names "anti-grid brutalism" (deliberately broken layouts, raw-HTML look, monospace type) as a 2026 counter-movement to polished bento layouts. Examples given: The Browser Company marketing pages, v0.dev, indie SaaS launches. — [StudioMeyer](https://studiomeyer.io/en/blog/webdesign-trends-2026-reality-check)
+- **[Opinion]** "Polished is the new generic": "When every brand can create the same smooth landing page, perfect starts to feel generic." The article says the purple-to-magenta "AI startup" gradient "now reads as generic", retro Y2K/chrome gradients have become template-like, and generic AI imagery is easy to spot and can undermine trust. Typography is presented as the main carrier of personality because it resists generic AI output. Its conclusion: the best sites "feel like they were made for a specific person." — [DesignRush: 16 Website Design Trends](https://www.designrush.com/agency/website-design-development/trends/web-design-trends)
+- **[Evidence]** Glassmorphism came back because Apple shipped "Liquid Glass" (previewed June 2025, shipped in iOS 26 / macOS Tahoe 26). Sources call it "Glassmorphism 2.0"; the first wave peaked around 2021. — [line25](https://line25.com/articles/web-design-trends-2026/); [The Plus Addons](https://theplusaddons.com/blog/web-design-trends-2026/)
+- **[Opinion, vendor]** For 3D portfolios, the "particle field hero with rotating logo" pattern is "over-saturated", and NFT/metaverse-themed 3D looks dated. The recommended approach is to commit to one strong visual idea, use scroll-driven case studies with one chapter per project, and use custom typography. The page also recommends device-tier detection with lighter scenes and a static fallback when WebGL isn't available. — [Svilenkovic: 3D Portfolio Trends 2026](https://www.svilenkovic.com/3d/3d-portfolio-trends-2026)
+- **[Opinion]** Developer-portfolio guides still expect minimal, content-first layouts to dominate. Heavy animation matters mainly for frontend or design roles; backend roles benefit more from documentation, performance metrics and system diagrams. — [Templifica](https://templifica.com/blog/developer-portfolio-templates-creating-a-job-winning-portfolio); [DEV: portfolio that gets you hired 2026](https://dev.to/__be2942592/how-to-build-a-developer-portfolio-that-actually-gets-you-hired-2026-6kn)
+- **[Anecdote]** Terminal/CLI-themed portfolio: developers liked it but recruiters found it "demanded too much participation". The author rebuilt it as a UI-first site with clear sections and big type, kept the personality, and says it got more attention (no metrics). A hiring manager in the comments said originality is valued and a terminal UI is "not bad at all", but found the rebuilt site's motion somewhat excessive. — [DEV: Why I ditched terminal UIs for recruiters](https://dev.to/zenoguy/why-i-ditched-terminal-uis-for-recruiters-57p7)
+- **[Evidence: platform status]** Same-document View Transitions became Baseline Newly available in Oct 2025 (Firefox 144). Cross-document (MPA, CSS-only) View Transitions are supported in Chrome and Safari; Firefox support is only partial (Level 1 / JS `startViewTransition`). Cross-document transitions are an Interop 2026 focus area. — [web.dev: same-document view transitions Baseline](https://web.dev/blog/same-document-view-transitions-are-now-baseline-newly-available?hl=en); [caniuse cross-document](https://caniuse.com/cross-document-view-transitions); [Chrome: view transitions 2025 update](https://developer.chrome.com/blog/view-transitions-in-2025)
+- **[Evidence: platform status]** CSS scroll-driven animations (`animation-timeline`) became Baseline Newly available when Firefox 159 enabled them by default in October 2026 (Chrome/Edge 115, Safari 26). Chrome 146 added scroll-*triggered* animations. — [web.dev: New to the web platform in October 2026](https://web.dev/blog/web-platform-10-2026); [Chrome: scroll-triggered animations](https://developer.chrome.com/blog/scroll-triggered-animations?hl=en)
+
+### Inferences
+- **Fresh in 2026 (when done with intent):** editorial or typographic layouts with a distinctive typeface; one signature interaction instead of many effects; scroll-driven project "chapters"; native View Transitions and CSS scroll-driven animations used as progressive enhancement (they show craft, need no JS library, and degrade gracefully); restrained grain or texture used to break the "too-perfect" AI look.
+- **Neutral/default (fine, not differentiating):** bento grid (only if tile sizes encode real priority), dark mode (support both themes via `prefers-color-scheme`), and subtle micro-interactions.
+- **Clichéd/risky:** particle or rotating-3D heroes; purple-to-magenta gradients; glass cards everywhere; full terminal/OS-desktop metaphors as the *only* way to reach content (high friction for skimmers; keep them as an optional mode or easter egg); kinetic headline text that hurts readability.
+- An OS-desktop or terminal metaphor can still work as an *alternate view* alongside a conventional, scannable default.
+
+### Gaps
+- No sources found specifically on grain/noise textures or OS-desktop portfolio metaphors (e.g., macOS-style windows) in 2025-2026. Awwwards/Godly listings were not systematically sampled, so "what's on Awwwards now" is not evidenced here.
+- No quantitative data on how often each style appears among developer portfolios.
+- Nielsen Norman Group material on dark mode or portfolios was not retrieved in this pass.
+
+## Differentiating features: which add real value vs gimmick?
+
+### Takeaway
+The best-supported differentiator is *proof of work you can touch*: live demos, playgrounds, interactive experiments, shipped tools. Low-cost "personality" pages (/now, /uses) are an established IndieWeb convention that adds authenticity cheaply. AI "ask me anything" resume bots are now very common, and no evidence was found that recruiters value them. Treat them as a supplement, never a replacement for scannable content. No direct evidence was found for command palettes, guestbooks, visitor counters, or sound design.
+
+### Cited Findings
+- **[Opinion + cited study]** Portfolios are shifting from static case studies to "proof-of-work objects you can touch, break, and explore." A study of 16 design leaders found an average decision time of **55 seconds**. Reviewers are "clicking around, getting a feel, and moving on". Four recurring paths: micro-interactions, a playground, "software as a gift" (shipping something useful), and learning in public. Examples cited: Chloe Yan (interactive playground), Preston Booth (micro-interactions), Ryo Lu (site of experiments), Wora Work (spatial world). — [UX Tools: The portfolio is becoming a playground (Feb 2026)](https://www.uxtools.co/blog/the-portfolio-is-becoming-a-playground)
+- **[Evidence, secondhand]** The same article cites a Figma 2026 hiring study: 73% of hiring managers say AI tool proficiency is increasingly required, and visual craft remains the top evaluation criterion (58%). It also says WealthSimple's "AI Builders" program accepts an AI system in place of a portfolio. Note: this is about design hiring and was not verified against Figma's original report. — [UX Tools](https://www.uxtools.co/blog/the-portfolio-is-becoming-a-playground)
+- **[Anecdote]** AI resume chatbots: many developers have built RAG/Gemini/OpenAI "ask me" bots, pitched on the basis that recruiters are too busy to piece together a profile. One builder added guardrails against prompts asking the bot to inflate titles, which shows the credibility risk. Another positions it explicitly as not a replacement for the resume. No recruiter-side evidence was found. — [DEV: AI portfolio that answers questions](https://dev.to/adebayoomolumo/i-built-an-ai-portfolio-that-actually-answers-your-questions-43d5); [DEV: AI portfolio that talks to recruiters](https://dev.to/sanjaysundarmurthy/how-i-built-an-ai-powered-portfolio-that-talks-to-recruiters-react-gemini-pure-magic-1om6); [DEV: ProjectHub embeddable AI recruiter assistant](https://dev.to/bradleymatera/how-i-built-projecthub-an-embeddable-ai-recruiter-assistant-that-runs-on-free-tiers-bif); [Product Hunt: Ask My Work](https://www.producthunt.com/products/ask-my-work)
+- **[Opinion]** DesignRush recommends using AI mainly behind the scenes (translation, tagging, summaries) rather than as the main visitor experience. — [DesignRush](https://www.designrush.com/agency/website-design-development/trends/web-design-trends)
+- **[Evidence]** The /now page was started by Derek Sivers: a page describing what you're focused on at this point in your life. nownownow.com lists sites that have one; a 2024 post reports 2,300+ people listed. It's documented as an IndieWeb pattern. — [nownownow.com/about](https://nownownow.com/about); [sive.rs/now2](https://sive.rs/now2); [IndieWeb: now](https://indieweb.org/now); [CSS-Tricks: nownownow](https://css-tricks.com/nownownow/)
+- **[Anecdote]** Hiring-manager quotes circulating in blogs say they skip landing pages and look at GitHub repos for structure, test coverage and commit history. These quotes could not be verified against the original sources. — [DEV: Recruiters aren't clicking your portfolio](https://dev.to/dev_tips/recruiters-arent-clicking-your-portfoliotheyre-looking-here-instead-2884)
+
+### Inferences
+- **High value:** live, embedded project demos and case studies with outcomes or metrics; one small playground or interactive experiment that shows craft; links to real code. Since reviewers check GitHub, a live GitHub activity or pinned-repo widget can bridge the portfolio and the code, as long as it's fast and cached.
+- **Medium value (cheap, authentic):** /now and /uses pages; a blog or "learning in public" notes; a command palette (⌘K) as a power-user shortcut, as long as normal navigation remains, it's keyboard-accessible, and it's announced to screen readers.
+- **Gimmick risk:** an AI chatbot as the primary interface (hallucination and credibility risk, cost, latency; very common in 2025-26, so not novel); visitor counters; autoplaying sound; now-playing/Spotify widgets (fun personality, near-zero hiring signal); guestbooks (moderation burden). Easter eggs are fine if hidden and never in the way.
+
+### Gaps
+- No sources found that measure recruiter reactions to command palettes, AI chatbots, guestbooks, Spotify/LeetCode widgets, sound design, or visitor counters. The value judgments above are inference.
+- The "55 seconds" and Figma study figures are design-hiring data relayed secondhand. No equivalent for software-engineering recruiters was found.
+
+## Typography, color, layout and motion best practices (incl. libraries)
+
+### Takeaway
+Typography is the main lever for distinctiveness, and motion should be purposeful, brief and optional. On the library side: Framer Motion is now "Motion" (`motion/react`, MIT), GSAP became fully free (Webflow, April 2025, including former paid plugins like SplitText and ScrollSmoother, but closed-source with a restrictive license), and native CSS scroll-driven animations plus View Transitions now cover many cases that used to need JavaScript.
+
+### Cited Findings
+- **[Opinion]** Typography carries personality and resists AI sameness. A strong typographic layout is often better than (and cheaper than) stock imagery. Kinetic type needs letter-spacing care and must stay readable. — [DesignRush](https://www.designrush.com/agency/website-design-development/trends/web-design-trends)
+- **[Opinion]** Kinetic typography "underdelivered": content must remain readable without animation. — [StudioMeyer](https://studiomeyer.io/en/blog/webdesign-trends-2026-reality-check)
+- **[Evidence]** Framer Motion spun off as the independent project "Motion" (announced Nov 2024; import from `motion/react`; old `framer-motion` package still works; MIT). — [Motion: Framer Motion is now independent](https://motion.dev/blog/framer-motion-is-now-independent-introducing-motion); [Motion: one year in review (Nov 2025)](https://motion.dev/blog/motion-independence-one-year-in-review)
+- **[Evidence/Opinion]** GSAP became free in April 2025 under Webflow, including SplitText, MorphSVG and ScrollSmoother. Motion's docs note that GSAP's license prohibits use in tools competing with Webflow and can be terminated (Motion's framing, so possibly biased). — [Motion: GSAP vs Motion](https://motion.dev/docs/gsap-vs-motion); [r/reactjs: GSAP is now completely free](https://redlib.hbubli.cc/r/reactjs/comments/1kmkwsn/gsap_is_now_completely_free)
+- **[Opinion]** Use animations sparingly, especially repeated ones: "They get visually annoying as they draw all of the attention." — [freeCodeCamp portfolio review](https://forum.freecodecamp.org/t/wanting-to-get-my-first-dev-job-portfolio-review/171313)
+- **[Evidence: platform]** CSS scroll-driven animations are Baseline as of Oct 2026 (Firefox 159), and same-document View Transitions are Baseline since Oct 2025. Feature-detect with `@supports` and provide non-animated fallbacks for older browsers. — [web.dev Oct 2026](https://web.dev/blog/web-platform-10-2026); [web.dev View Transitions Baseline](https://web.dev/blog/same-document-view-transitions-are-now-baseline-newly-available?hl=en)
+
+### Inferences
+- A reasonable 2026 stack for a Next.js portfolio: CSS-first motion (scroll-driven animations, View Transitions, `@starting-style`), Motion for component-level React animation, and GSAP only if timeline-heavy work is needed. Lenis/smooth scroll is optional and must be disabled under reduced motion.
+- Pick one or two distinctive typefaces (variable fonts for performance), a restrained palette with one accent color, and check contrast in both themes.
+
+### Gaps
+- No primary source found on Lenis specifically, including its accessibility behavior or reduced-motion handling. Check Lenis docs directly.
+- No authoritative 2026 typography trend data (e.g., Google Fonts usage stats) was retrieved.
+
+## Accessibility (WCAG 2.2), mobile-first, and how heavy animation affects recruiter experience
+
+### Takeaway
+WCAG 2.2 AA adds concrete requirements that commonly trip up flashy portfolios: focus not hidden behind sticky headers, 24×24 px minimum targets, and alternatives to dragging. Reduced-motion support is essential for parallax, scroll reveals, page transitions and smooth scroll. Practitioner consensus (anecdotal) is that reviewers skim fast, often on phones, so heavy animation and slow loads risk losing them.
+
+### Cited Findings
+- **[Evidence: spec]** WCAG 2.2 new criteria include 2.4.11 Focus Not Obscured (Minimum, AA), 2.5.7 Dragging Movements (AA, single-pointer alternative needed), 2.5.8 Target Size (Minimum, AA, at least 24×24 CSS px or enough spacing), 3.2.6 Consistent Help (A), 3.3.7 Redundant Entry (A), and 3.3.8 Accessible Authentication (AA). 4.1.1 Parsing is obsolete and removed. — [W3C: What's New in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/)
+- **[Evidence: spec]** SC 2.3.3 Animation from Interactions (AAA): motion triggered by interaction can be disabled unless essential. The rationale is vestibular disorders (dizziness, nausea, headaches). — [W3C Understanding 2.3.3](https://w3c.github.io/wcag/understanding/animation-from-interactions.html)
+- **[Opinion/guidance]** Parallax, page transitions, hover zooms and scroll-driven reveals should be disabled or reduced under `prefers-reduced-motion: reduce`. Wrap `scroll-behavior: smooth` in `prefers-reduced-motion: no-preference`. The media query does not cover autoplay or looping content, which needs pause controls under SC 2.2.2. Reduce or replace motion rather than removing all of it. — [techearl: prefers-reduced-motion](https://techearl.com/prefers-reduced-motion); [OpenReplay: accessible animation](https://blog.openreplay.com/prefers-reduced-motion-accessible-animation/); [DisabilityWorld: reduced motion](https://www.disabilityworld.org/toolkit/glossary/reduced-motion/)
+- **[Opinion, vendor]** Portfolio reviewers (recruiters, hiring managers) often browse on phones, so design mobile-first. Winning portfolios respect reduced motion and give a static fallback when WebGL isn't available. — [Svilenkovic](https://www.svilenkovic.com/3d/3d-portfolio-trends-2026)
+- **[Anecdote]** "Assume about 10 seconds to hook them". Animations should be subtle and must not "make the recruiter dizzy or their device struggle". Slow load times are flagged repeatedly in portfolio reviews. — [DEV: Recruiters aren't clicking your portfolio](https://dev.to/dev_tips/recruiters-arent-clicking-your-portfolio-theyre-looking-here-instead-2884); [freeCodeCamp review](https://forum.freecodecamp.org/t/wanting-to-get-my-first-dev-job-portfolio-review/171313)
+- **[Evidence, design-hiring]** 55-second average decision time across 16 design leaders. — [UX Tools](https://www.uxtools.co/blog/the-portfolio-is-becoming-a-playground)
+
+### Inferences
+- Above-the-fold content (name, role, value proposition, key links/CTA) should render instantly without waiting on animation or WebGL. Any intro or loader animation is a net negative for skimmers.
+- Heavy client-side 3D and animation libraries hurt Core Web Vitals (LCP/INP) on mid-range phones, which is exactly the device a recruiter may use. Lazy-load or gate them behind interaction.
+- Concrete checks for this site: visible focus that isn't covered by a sticky nav (`scroll-padding-top`); 24 px+ targets for social icons and nav on mobile; keyboard access to any carousel, testimonial slider or command palette; a reduced-motion path for every animation, including Lenis or smooth scroll.
+
+### Gaps
+- No controlled study found on how animation intensity affects recruiter perception or callback rates. The claim that recruiters rarely open portfolios is widespread but anecdotal and conflicts with hiring managers who say they do check sites.
+
+## Template fatigue: which templates hurt originality?
+
+### Takeaway
+Brittany Chiang's v4 portfolio (dark navy, green accent, numbered sections, left-fixed sidebar) is the most-cloned developer portfolio, and people recognize clones on sight. Shadcn-based animated component registries (Magic UI, Aceternity) plus their own portfolio templates create a second wave of look-alike Next.js sites. Direct, quantified evidence of "fatigue" is thin; it's mostly opinion.
+
+### Cited Findings
+- **[Evidence-ish]** Brittany Chiang's portfolio "has been forked thousands of times"; many public repos recreate it (TypeScript and Gatsby versions). — [CSSNectar: Brittany Chiang Portfolio](https://cssnectar.com/?p=21025); [GitHub: pycoder2000/portfolio-v4](https://github.com/pycoder2000/portfolio-v4)
+- **[Opinion]** "It's pretty apparent when these are used". Developers should show their own skills rather than rely on a template. — [Portfolio redesign blog post](https://tw-blog-ochre.vercel.app/2020/07/08/portfolio-redesign-part-1-ideas)
+- **[Opinion]** Middle path: clone a template's *structure*, then strip out the visuals and rebuild them in your own brand. — [DEV: 10 portfolio templates I'd actually clone in 2026](https://dev.to/designtocodes/10-portfolio-templates-i-would-actually-clone-in-2026-nextjs-react-html-phc)
+- **[Evidence: distribution]** Magic UI is described as the largest animated shadcn registry, and Aceternity ships 262 components through the shadcn CLI. Aceternity is called "the de facto reference for premium-feeling React landing pages in 2026" and sells portfolio layouts. Magic UI offers a free Next.js + shadcn + Framer Motion portfolio template. — [PkgPulse: Aceternity vs Magic UI vs shadcn 2026](https://www.pkgpulse.com/guides/aceternity-ui-vs-magic-ui-vs-shadcn-animated-react-2026); [Aceternity shadcn blocks](https://ui.aceternity.com/shadcn-blocks); [DesignRevision: Magic UI alternatives](https://designrevision.com/alternatives/magic-ui)
+- **[Opinion]** Layout convergence driven by AI and template tools is why polished output "feels generic". — [DesignRush](https://www.designrush.com/agency/website-design-development/trends/web-design-trends)
+
+### Inferences
+- Recognizable "template tells" to avoid: the Chiang navy/teal sidebar layout; Aceternity-style spotlight, beam, aurora or meteor hero backgrounds; Magic UI marquee and orbiting-icon tech-stack sections; the 3D tilt card grid; the default shadcn zinc palette with Geist font; and purple gradients. Using one of these components is fine. Stacking several, unmodified, signals "assembled, not designed".
+- Using shadcn/Radix *primitives* for accessible behavior is fine and invisible. Fatigue comes from the stock *visual* effects, not the primitives.
+
+### Gaps
+- No source quantifies how many live portfolios use these templates, and no source measures recruiter reactions to recognizably templated sites.
+- Reddit r/webdev and r/web_design 2025-26 portfolio-feedback threads were only partially reached (via mirrors). No first-hand thread content citing "Aceternity look" fatigue was retrieved.
